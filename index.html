@@ -302,6 +302,7 @@
       color: #ffffff;
     }
 
+    /* ===== FIXED AVATAR SECTION ===== */
     .hero-avatar {
       display: flex;
       justify-content: center;
@@ -309,9 +310,15 @@
       position: relative;
     }
 
-    .avatar-circle {
+    .avatar-wrapper {
+      position: relative;
       width: 350px;
       height: 350px;
+    }
+
+    .avatar-circle {
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       background: var(--accent-gradient);
       display: flex;
@@ -323,8 +330,10 @@
       box-shadow: 0 0 80px rgba(34, 211, 238, 0.15);
       border: 3px solid rgba(34, 211, 238, 0.2);
       position: relative;
+      z-index: 2;
     }
 
+    /* Floating Badges - Fixed Positioning */
     .floating-badge {
       position: absolute;
       background: var(--bg-card);
@@ -337,26 +346,37 @@
       backdrop-filter: blur(8px);
       animation: float 6s ease-in-out infinite;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      white-space: nowrap;
+      z-index: 3;
     }
+
     .floating-badge:nth-child(2) {
-      top: 10%;
-      right: -10%;
+      top: -10%;
+      right: -15%;
       animation-delay: 0s;
     }
+
     .floating-badge:nth-child(3) {
-      bottom: 15%;
-      left: -15%;
+      bottom: -5%;
+      left: -20%;
       animation-delay: 2s;
     }
+
     .floating-badge:nth-child(4) {
-      bottom: 5%;
-      right: -5%;
+      bottom: 20%;
+      right: -20%;
       animation-delay: 4s;
     }
 
+    /* Add a 4th badge for better balance */
+    .floating-badge:nth-child(5) {
+      top: 25%;
+      left: -25%;
+      animation-delay: 1s;
+    }
+
     @keyframes float {
-      0%,
-      100% {
+      0%, 100% {
         transform: translateY(0px);
       }
       50% {
@@ -396,6 +416,8 @@
       font-size: 1rem;
       color: var(--accent-cyan);
       font-weight: 600;
+      display: block;
+      margin-top: 0.2rem;
     }
     .timeline-item .period {
       font-size: 0.85rem;
@@ -419,6 +441,21 @@
       position: absolute;
       left: 0;
       color: var(--accent-cyan);
+    }
+
+    .tech-stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+    }
+    .tech-stack-tags span {
+      background: rgba(34, 211, 238, 0.08);
+      color: var(--text-primary);
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(34, 211, 238, 0.1);
     }
 
     /* ===== SKILLS ===== */
@@ -564,9 +601,11 @@
       .hero-cta-group {
         justify-content: center;
       }
-      .avatar-circle {
+      .avatar-wrapper {
         width: 250px;
         height: 250px;
+      }
+      .avatar-circle {
         font-size: 4rem;
       }
       .floating-badge {
@@ -625,6 +664,13 @@
       }
       .skills-grid {
         grid-template-columns: 1fr;
+      }
+      .avatar-wrapper {
+        width: 200px;
+        height: 200px;
+      }
+      .avatar-circle {
+        font-size: 3rem;
       }
     }
 
@@ -699,12 +745,16 @@
         </div>
       </div>
 
+      <!-- ===== FIXED AVATAR WITH BADGES ===== -->
       <div class="hero-avatar">
-        <div class="avatar-circle">
-          RK
-          <span class="floating-badge" style="top: 5%; right: -5%;">⚡ 40% Latency Cut</span>
-          <span class="floating-badge" style="bottom: 15%; left: -10%;">☁️ AWS · Microservices</span>
-          <span class="floating-badge" style="bottom: 0; right: -5%;">🏗️ Event-Driven</span>
+        <div class="avatar-wrapper">
+          <div class="avatar-circle">
+            RK
+          </div>
+          <span class="floating-badge">⚡ 40% Latency Cut</span>
+          <span class="floating-badge">☁️ AWS · Microservices</span>
+          <span class="floating-badge">🏗️ Event-Driven</span>
+          <span class="floating-badge">🚀 2M+ Txn/mo</span>
         </div>
       </div>
     </div>
@@ -719,40 +769,64 @@
 
       <div class="timeline">
 
-        <!-- Experience 1 -->
+        <!-- ===== SDE 2 - Enhanced ===== -->
         <div class="timeline-item fade-up">
           <span class="company">EWNS Web Services Pvt Ltd</span>
-          <span class="role">Senior Software Engineer</span>
-          <div class="period">June 2024 – Present · Hyderabad, India (Remote)</div>
+          <span class="role">Software Development Engineer 2</span>
+          <div class="period">June 2024 – Present · 2 years 1 month · Hyderabad, India (Remote)</div>
           <ul>
-            <li>Architected event-driven microservices with AWS SQS & BullMQ, processing <strong>2M+ monthly transactions</strong> with 99.99% success rate.</li>
-            <li>Optimized high-traffic systems for <strong>150K+ users</strong>, reducing API latency by <strong>40%</strong> via Redis caching & PostgreSQL master-slave replication.</li>
-            <li>Implemented blue-green deployments for zero-downtime releases and built automated reconciliation systems reducing manual effort by 90%.</li>
+            <li><strong>Scalability & Performance:</strong> Architected Redis caching layer reducing database load by <strong>60%</strong>, bringing API latency down <strong>40%</strong> (from 180ms to 108ms) for 150K+ active users.</li>
+            <li><strong>Event-Driven Architecture:</strong> Designed distributed event-driven system using <strong>AWS SQS + BullMQ</strong>, processing <strong>2M+ monthly transactions</strong> with <strong>99.99% success rate</strong> and zero data loss.</li>
+            <li><strong>Deployment Strategy:</strong> Implemented <strong>blue-green deployments</strong> achieving <strong>zero-downtime</strong> releases for critical payment infrastructure serving 10K+ RPS readiness.</li>
+            <li><strong>Automation & Reconciliation:</strong> Built automated statement generation system processing <strong>150K+ statements monthly</strong> using Node.js workers, BullMQ, AWS S3 & SES, reducing manual effort by <strong>90%</strong>.</li>
+            <li><strong>Transaction Integrity:</strong> Implemented idempotent transaction processors ensuring <strong>no double-spend</strong> in loan disbursements and card authorizations with <strong>100% accuracy</strong>.</li>
+            <li><strong>Error Handling:</strong> Designed dead-letter queues and retry mechanisms with exponential backoff, reducing failed transactions by <strong>85%</strong>.</li>
+            <li><strong>Monitoring:</strong> Created real-time dashboards tracking transaction health, latency, and error rates, enabling <strong>proactive incident response</strong>.</li>
           </ul>
+          <div class="tech-stack-tags">
+            <span>Node.js</span><span>NestJS</span><span>TypeScript</span>
+            <span>PostgreSQL</span><span>Redis</span>
+            <span>AWS (SQS, S3, SES, EC2)</span>
+            <span>BullMQ</span><span>Docker</span>
+          </div>
         </div>
 
-        <!-- Experience 2 -->
+        <!-- ===== SDE 1 - Enhanced ===== -->
         <div class="timeline-item fade-up">
           <span class="company">EWNS Web Services Pvt Ltd</span>
-          <span class="role">Software Engineer</span>
-          <div class="period">Jan 2023 – June 2024 · Hyderabad, India (Remote)</div>
+          <span class="role">Software Development Engineer 1</span>
+          <div class="period">January 2023 – June 2024 · 1 year 6 months · Hyderabad, India (Remote)</div>
           <ul>
-            <li>Built end-to-end <strong>KYC/AML verification</strong> pipeline using Plaid IDV & Persona APIs, reducing verification time from <strong>3 days to 15 minutes</strong>.</li>
-            <li>Developed Plaid/Bond integration fetching banking data for <strong>150K+ users</strong>, enabling instant loan eligibility without hard credit pulls.</li>
-            <li>Designed double-entry ledger system processing <strong>2M+ monthly transactions</strong> incl. loan disbursements & card authorizations.</li>
+            <li><strong>KYC/AML Pipeline:</strong> Built end-to-end user onboarding and verification pipeline integrating <strong>Plaid IDV, Atelio-Bond, and Persona APIs</strong> for biometric liveness detection and global watchlist screening, reducing verification time from <strong>3 days to 15 minutes</strong> (99% improvement).</li>
+            <li><strong>Cashflow Scoring:</strong> Developed Plaid/Bond integration fetching <strong>3-6 months of transactional banking data</strong> for <strong>150K+ users</strong>, building algorithm for Cashflow Scores enabling <strong>instant loan eligibility</strong> without hard credit pulls.</li>
+            <li><strong>Ledger System:</strong> Designed <strong>double-entry accounting system</strong> handling loan disbursements, repayments, and card authorizations with complete audit trails and financial accuracy.</li>
+            <li><strong>API Development:</strong> Built REST APIs and background workers processing <strong>2M+ monthly transactions</strong> with <strong>&lt;100ms p95 latency</strong> for payment processing.</li>
+            <li><strong>Idempotency:</strong> Implemented idempotency keys preventing duplicate transactions with <strong>100% accuracy</strong>, critical for financial operations.</li>
+            <li><strong>Third-Party Integrations:</strong> Successfully integrated multiple fintech APIs (Plaid, Bond, Persona) with robust error handling and retry mechanisms.</li>
+            <li><strong>Data Privacy:</strong> Ensured compliance with data protection standards by implementing encryption and secure data handling for sensitive financial information.</li>
           </ul>
+          <div class="tech-stack-tags">
+            <span>Node.js</span><span>Express.js</span><span>TypeScript</span>
+            <span>PostgreSQL</span><span>Redis</span>
+            <span>AWS (Lambda, API Gateway, S3)</span>
+            <span>Plaid API</span><span>Persona API</span><span>Docker</span>
+          </div>
         </div>
 
-        <!-- Experience 3 -->
+        <!-- ===== Internship ===== -->
         <div class="timeline-item fade-up">
           <span class="company">Sutara IT Solutions</span>
           <span class="role">Salesforce Developer Intern</span>
-          <div class="period">April 2022 – Jan 2023 · Kolkata, India</div>
+          <div class="period">April 2022 – January 2023 · 10 months · Kolkata, India</div>
           <ul>
-            <li>Optimized WordPress site performance — <strong>45% faster</strong> loading through code minification & CDN integration.</li>
-            <li>Implemented <strong>50+ custom forms</strong> with validation, reducing user drop-off by 30%.</li>
-            <li>Executed SEO strategy increasing organic traffic by <strong>60%</strong> in 6 months.</li>
+            <li><strong>Performance Optimization:</strong> Optimized WordPress website loading time by <strong>45%</strong> through image compression, code minification, and CDN integration.</li>
+            <li><strong>User Experience:</strong> Implemented <strong>50+ custom forms</strong> with validation and auto-population, reducing user drop-off by <strong>30%</strong>.</li>
+            <li><strong>SEO Strategy:</strong> Executed comprehensive SEO strategy improving organic traffic by <strong>60%</strong> in 6 months through on-page optimization and content strategy.</li>
+            <li><strong>Bug Fixing:</strong> Identified and resolved critical issues across the customer WordPress website, improving overall site stability.</li>
           </ul>
+          <div class="tech-stack-tags">
+            <span>WordPress</span><span>PHP</span><span>HTML/CSS</span><span>JavaScript</span><span>SEO</span>
+          </div>
         </div>
 
       </div>
@@ -909,8 +983,7 @@
 
     fadeElements.forEach(el => observer.observe(el));
 
-    // Smooth anchor scroll for nav links (already handled by CSS scroll-behavior)
-    // But we ensure it works for all internal links
+    // Smooth anchor scroll for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
