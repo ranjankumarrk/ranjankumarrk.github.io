@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- SEO Meta Tags -->
-  <title>Ranjan Kumar | Backend Engineer - Node.js, NestJS, AWS</title>
-  <meta name="description" content="Backend Engineer with 4.5+ years of experience architecting scalable fintech infrastructure. Expert in Node.js, NestJS, AWS, and Microservices." />
-  <meta name="keywords" content="Ranjan Kumar, Backend Engineer, Node.js, NestJS, AWS, Microservices, Fintech, Portfolio" />
-  <meta property="og:title" content="Ranjan Kumar | Backend Engineer" />
-  <meta property="og:description" content="Building scalable, high-performance systems for 150K+ users with 99.99% reliability." />
+  <title>Ranjan Kumar | Senior Software Engineer — Node.js, Golang, AWS</title>
+  <meta name="description" content="Senior Software Engineer with 4.5+ years building scalable fintech systems. Node.js, NestJS, Golang, AWS. 150K+ users, 5M+ monthly transactions." />
+  <meta name="keywords" content="Ranjan Kumar, Senior Software Engineer, Backend Engineer, Node.js, NestJS, Golang, AWS, Microservices, Fintech, Portfolio" />
+  <meta property="og:title" content="Ranjan Kumar | Senior Software Engineer" />
+  <meta property="og:description" content="Building scalable fintech infrastructure for 150K+ users and 5M+ monthly transactions." />
   <meta property="og:type" content="website" />
   <meta name="robots" content="index, follow" />
   <meta name="msvalidate.01" content="7891F6F3F9E801B403DBFAD871DCDA5B" />
@@ -386,7 +386,7 @@
     }
 
     /* ===== EXPERIENCE ===== */
-    #experience {
+    #experience, #projects, #achievements {
       padding: 5rem 0;
     }
 
@@ -408,19 +408,23 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
 
-    .timeline-item .company {
+    .timeline-item .company,
+    .edu-card .company {
       font-size: 1.3rem;
       font-weight: 700;
       color: #ffffff;
+      display: block;
     }
-    .timeline-item .role {
+    .timeline-item .role,
+    .edu-card .role {
       font-size: 1rem;
       color: var(--accent-cyan);
       font-weight: 600;
       display: block;
       margin-top: 0.2rem;
     }
-    .timeline-item .period {
+    .timeline-item .period,
+    .edu-card .period {
       font-size: 0.85rem;
       color: var(--text-secondary);
       margin-bottom: 0.75rem;
@@ -675,6 +679,71 @@
       }
     }
 
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.75rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    .project-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+    .project-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+    .achievement-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .achievement-card strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 0.35rem;
+    }
+    .achievement-card span {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    .edu-card {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-cyan);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+    }
+    .form-banner {
+      display: none;
+      margin-bottom: 1rem;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      background: rgba(34, 211, 238, 0.12);
+      border: 1px solid rgba(34, 211, 238, 0.3);
+      color: var(--text-primary);
+    }
+    .form-banner.visible { display: block; }
+    .hamburger.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
     /* ===== SCROLL ANIMATIONS ===== */
     .fade-up {
       opacity: 0;
@@ -693,11 +762,12 @@
   <nav>
     <div class="container nav-content">
       <span class="nav-logo">RK.</span>
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
       </ul>
@@ -708,14 +778,14 @@
   <section id="hero">
     <div class="container hero-grid">
       <div class="hero-content">
-        <span class="section-badge">🚀 Available for Opportunities</span>
+        <span class="section-badge">🚀 Senior Software Engineer · Open to opportunities</span>
         <h1>
           Hi, I'm <br />
           <span class="highlight">Ranjan Kumar</span>
         </h1>
         <p class="hero-tagline">
-          Backend Engineer · Node.js · NestJS · AWS <br />
-          Architecting Scalable Fintech Infrastructure
+          Senior Software Engineer · Node.js · Golang · AWS <br />
+          Architecting scalable fintech infrastructure
         </p>
 
         <div class="hero-metrics">
@@ -724,7 +794,7 @@
             <span class="metric-label">Active Users</span>
           </div>
           <div class="metric">
-            <span class="metric-number">2M+</span>
+            <span class="metric-number">5M+</span>
             <span class="metric-label">Monthly Transactions</span>
           </div>
           <div class="metric">
@@ -737,10 +807,10 @@
           <a href="#contact" class="btn-primary">
             📬 Get in Touch
           </a>
-          <a href="https://linkedin.com/in/ranjankumarrk" target="_blank" class="btn-secondary">
+          <a href="https://www.linkedin.com/in/ranjankumarrk/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
             🔗 LinkedIn
           </a>
-          <a href="https://github.com/ranjankumarrk" target="_blank" class="btn-secondary">
+          <a href="https://github.com/ranjankumarrk" target="_blank" rel="noopener noreferrer" class="btn-secondary">
             🐙 GitHub
           </a>
         </div>
@@ -750,16 +820,18 @@
       <div class="hero-avatar">
         <div class="avatar-wrapper">
           <div class="avatar-circle">
-            <img 
-                src="Ranjan Formal Photo.jpeg" 
-                alt="Ranjan" 
+            <img
+                src="ranjan.jpg"
+                alt="Ranjan Kumar, Senior Software Engineer"
+                width="350"
+                height="350"
                 style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;"
             />
           </div>
           <span class="floating-badge">⚡ 40% Latency Cut</span>
           <span class="floating-badge">☁️ AWS · Microservices</span>
           <span class="floating-badge">🏗️ Event-Driven</span>
-          <span class="floating-badge">🚀 2M+ Txn/mo</span>
+          <span class="floating-badge">🚀 5M+ Txn/mo</span>
         </div>
       </div>
     </div>
@@ -770,70 +842,135 @@
     <div class="container">
       <span class="section-badge">💼 Experience</span>
       <h2 class="section-title">Where I've Scaled Systems</h2>
-      <p class="section-subtitle">4.5+ years of building production-grade fintech infrastructure.</p>
+      <p class="section-subtitle">4.5+ years of production fintech systems — now Senior Software Engineer at EWNS.</p>
 
       <div class="timeline">
 
-        <!-- ===== SDE 2 - Enhanced ===== -->
         <div class="timeline-item fade-up">
           <span class="company">EWNS Web Services Pvt Ltd</span>
-          <span class="role">Software Development Engineer 2</span>
-          <div class="period">June 2024 – Present · 2 years 1 month · Hyderabad, India (Remote)</div>
+          <span class="role">Senior Software Engineer</span>
+          <div class="period">January 2026 – Present · 8 months · Hyderabad, India (Remote)</div>
           <ul>
-            <li><strong>Scalability & Performance:</strong> Architected Redis caching layer reducing database load by <strong>60%</strong>, bringing API latency down <strong>40%</strong> (from 180ms to 108ms) for 150K+ active users.</li>
-            <li><strong>Event-Driven Architecture:</strong> Designed distributed event-driven system using <strong>AWS SQS + BullMQ</strong>, processing <strong>2M+ monthly transactions</strong> with <strong>99.99% success rate</strong> and zero data loss.</li>
-            <li><strong>Deployment Strategy:</strong> Implemented <strong>blue-green deployments</strong> achieving <strong>zero-downtime</strong> releases for critical payment infrastructure serving 10K+ RPS readiness.</li>
-            <li><strong>Automation & Reconciliation:</strong> Built automated statement generation system processing <strong>150K+ statements monthly</strong> using Node.js workers, BullMQ, AWS S3 & SES, reducing manual effort by <strong>90%</strong>.</li>
-            <li><strong>Transaction Integrity:</strong> Implemented idempotent transaction processors ensuring <strong>no double-spend</strong> in loan disbursements and card authorizations with <strong>100% accuracy</strong>.</li>
-            <li><strong>Error Handling:</strong> Designed dead-letter queues and retry mechanisms with exponential backoff, reducing failed transactions by <strong>85%</strong>.</li>
-            <li><strong>Monitoring:</strong> Created real-time dashboards tracking transaction health, latency, and error rates, enabling <strong>proactive incident response</strong>.</li>
+            <li><strong>Architecture ownership:</strong> Lead end-to-end delivery of business-critical financial microservices — scalability, reliability, and maintainability.</li>
+            <li><strong>Mentorship:</strong> Guide engineers through design discussions, code reviews, debugging, and engineering practices to raise velocity and quality.</li>
+            <li><strong>Production:</strong> Own incident response, root-cause analysis, observability, and performance work that improves reliability and reduces MTTR.</li>
           </ul>
           <div class="tech-stack-tags">
-            <span>Node.js</span><span>NestJS</span><span>TypeScript</span>
-            <span>PostgreSQL</span><span>Redis</span>
-            <span>AWS (SQS, S3, SES, EC2)</span>
-            <span>BullMQ</span><span>Docker</span>
+            <span>Node.js</span><span>NestJS</span><span>Golang</span><span>TypeScript</span>
+            <span>AWS ECS</span><span>OpenTelemetry</span><span>CloudWatch</span>
           </div>
         </div>
 
-        <!-- ===== SDE 1 - Enhanced ===== -->
         <div class="timeline-item fade-up">
           <span class="company">EWNS Web Services Pvt Ltd</span>
-          <span class="role">Software Development Engineer 1</span>
-          <div class="period">January 2023 – June 2024 · 1 year 6 months · Hyderabad, India (Remote)</div>
+          <span class="role">Software Development Engineer II</span>
+          <div class="period">January 2024 – January 2026 · 2 years · Hyderabad, India (Remote)</div>
           <ul>
-            <li><strong>KYC/AML Pipeline:</strong> Built end-to-end user onboarding and verification pipeline integrating <strong>Plaid IDV, Atelio-Bond, and Persona APIs</strong> for biometric liveness detection and global watchlist screening, reducing verification time from <strong>3 days to 15 minutes</strong> (99% improvement).</li>
-            <li><strong>Cashflow Scoring:</strong> Developed Plaid/Bond integration fetching <strong>3-6 months of transactional banking data</strong> for <strong>150K+ users</strong>, building algorithm for Cashflow Scores enabling <strong>instant loan eligibility</strong> without hard credit pulls.</li>
-            <li><strong>Ledger System:</strong> Designed <strong>double-entry accounting system</strong> handling loan disbursements, repayments, and card authorizations with complete audit trails and financial accuracy.</li>
-            <li><strong>API Development:</strong> Built REST APIs and background workers processing <strong>2M+ monthly transactions</strong> with <strong>&lt;100ms p95 latency</strong> for payment processing.</li>
-            <li><strong>Idempotency:</strong> Implemented idempotency keys preventing duplicate transactions with <strong>100% accuracy</strong>, critical for financial operations.</li>
-            <li><strong>Third-Party Integrations:</strong> Successfully integrated multiple fintech APIs (Plaid, Bond, Persona) with robust error handling and retry mechanisms.</li>
-            <li><strong>Data Privacy:</strong> Ensured compliance with data protection standards by implementing encryption and secure data handling for sensitive financial information.</li>
+            <li><strong>Microservices:</strong> Led architecture for <strong>12+ services</strong> with circuit breakers, retries, and async event processing for high-traffic financial operations.</li>
+            <li><strong>Performance:</strong> Cut API latency <strong>40%</strong> (1s → 200ms) for <strong>150K+ daily active users</strong> via Redis caching, PostgreSQL indexing, MongoDB compound indexes, and blue-green deploys on <strong>AWS ECS</strong>.</li>
+            <li><strong>Statements:</strong> Built CRON generation for <strong>150K+ financial documents / month</strong> using Node.js workers, BullMQ, Redis, AWS S3 &amp; SES, plus Go goroutines &amp; channels.</li>
+            <li><strong>AML:</strong> Applied Oracle Watchlist Screening (OWS) and Enterprise Data Quality (OEDQ) for screening, profiling, cleansing, and de-duplication.</li>
+            <li><strong>Scale:</strong> Event-driven processing of <strong>5M+ monthly transactions</strong> with AWS SQS + BullMQ, 99.99% success rate, idempotent processors, and dead-letter retries.</li>
+            <li><strong>Observability:</strong> OpenTelemetry tracing and CloudWatch monitoring; <strong>60% MTTR reduction</strong>.</li>
+          </ul>
+          <div class="tech-stack-tags">
+            <span>Node.js</span><span>NestJS</span><span>Golang</span><span>TypeScript</span>
+            <span>PostgreSQL</span><span>MongoDB</span><span>Redis</span>
+            <span>AWS (ECS, SQS, S3, SES)</span>
+            <span>BullMQ</span><span>OWS</span><span>OEDQ</span><span>Docker</span>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up">
+          <span class="company">EWNS Web Services Pvt Ltd</span>
+          <span class="role">Software Development Engineer I</span>
+          <div class="period">January 2023 – January 2024 · 1 year · Hyderabad, India (Remote)</div>
+          <ul>
+            <li><strong>KYC/AML:</strong> Onboarding for <strong>150K+ users</strong> with Plaid IDV, Atelio-Bond, and Persona — biometric liveness and watchlist screening at <strong>98% accuracy</strong>. Verification: <strong>3 days → 15 minutes</strong>.</li>
+            <li><strong>Cashflow scoring:</strong> Plaid/Bond banking data (3–6 months) for instant advance eligibility — approvals <strong>48 hrs → 30 mins</strong>.</li>
+            <li><strong>Ledger:</strong> Background workers for loan disbursements, repayments, and card authorizations on a double-entry ledger, contributing to <strong>5M+ monthly transactions</strong>.</li>
+            <li><strong>Auth &amp; quality:</strong> JWT + RBAC; Jest unit/integration tests at <strong>85% coverage</strong>.</li>
           </ul>
           <div class="tech-stack-tags">
             <span>Node.js</span><span>Express.js</span><span>TypeScript</span>
             <span>PostgreSQL</span><span>Redis</span>
             <span>AWS (Lambda, API Gateway, S3)</span>
-            <span>Plaid API</span><span>Persona API</span><span>Docker</span>
+            <span>Plaid</span><span>Persona</span><span>Bond</span><span>Jest</span>
           </div>
         </div>
 
-        <!-- ===== Internship ===== -->
         <div class="timeline-item fade-up">
           <span class="company">Sutara IT Solutions</span>
-          <span class="role">Salesforce Developer Intern</span>
+          <span class="role">Software Developer</span>
           <div class="period">April 2022 – January 2023 · 10 months · Kolkata, India</div>
           <ul>
-            <li><strong>Performance Optimization:</strong> Optimized WordPress website loading time by <strong>45%</strong> through image compression, code minification, and CDN integration.</li>
-            <li><strong>User Experience:</strong> Implemented <strong>50+ custom forms</strong> with validation and auto-population, reducing user drop-off by <strong>30%</strong>.</li>
-            <li><strong>SEO Strategy:</strong> Executed comprehensive SEO strategy improving organic traffic by <strong>60%</strong> in 6 months through on-page optimization and content strategy.</li>
-            <li><strong>Bug Fixing:</strong> Identified and resolved critical issues across the customer WordPress website, improving overall site stability.</li>
+            <li><strong>Performance:</strong> Cut page load <strong>4.2s → 1s</strong> (57%) with lazy loading, image compression, and caching.</li>
+            <li><strong>Stack:</strong> Worked with Golang (Gin, net/http, goroutines), Node.js, Redis, PostgreSQL, AWS S3 / EC2 / CloudWatch, and Docker.</li>
           </ul>
           <div class="tech-stack-tags">
-            <span>WordPress</span><span>PHP</span><span>HTML/CSS</span><span>JavaScript</span><span>SEO</span>
+            <span>Golang</span><span>Gin</span><span>Node.js</span><span>Redis</span>
+            <span>PostgreSQL</span><span>AWS</span><span>Docker</span>
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <span class="section-badge">📌 Projects</span>
+      <h2 class="section-title">Things I've Shipped</h2>
+      <p class="section-subtitle">Selected work from production, school, and side projects.</p>
+      <div class="projects-grid">
+        <article class="project-card fade-up">
+          <h3>FinTech payment platform</h3>
+          <p>KYC/AML, cashflow scoring, ledgers, and statement generation for 150K+ users and 5M+ monthly transactions.</p>
+          <div class="tech-stack-tags">
+            <span>Node.js</span><span>NestJS</span><span>Golang</span><span>AWS</span>
+          </div>
+        </article>
+        <article class="project-card fade-up">
+          <h3>Library Management System</h3>
+          <p>1000+ books, 500+ students, RBAC (Admin / Librarian / Student). 12+ tables; search 3s → 200ms. 1st prize, LNCT TechFest 2021.</p>
+          <div class="tech-stack-tags">
+            <span>MERN</span><span>PostgreSQL</span><span>JWT</span>
+          </div>
+        </article>
+        <article class="project-card fade-up">
+          <h3><a href="https://mithila-treats-tool.vercel.app" target="_blank" rel="noopener noreferrer">Mithila Treats calculator</a></h3>
+          <p>Production-cost tool for ingredient ratios, pricing, and batch planning. Live on Vercel.</p>
+          <div class="tech-stack-tags">
+            <span>TypeScript</span><span>Vercel</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="container">
+      <span class="section-badge">🏆 Highlights</span>
+      <h2 class="section-title">Achievements &amp; education</h2>
+      <p class="section-subtitle">Credentials behind the production work.</p>
+      <div class="achievements-grid" style="margin-bottom: 2rem;">
+        <div class="achievement-card fade-up">
+          <strong>GATE 2022 · AIR 1800</strong>
+          <span>Computer Science Engineering</span>
+        </div>
+        <div class="achievement-card fade-up">
+          <strong>LNCT TechFest 2021</strong>
+          <span>1st prize · Library Management System</span>
+        </div>
+        <div class="achievement-card fade-up">
+          <strong><a href="https://leetcode.com/u/ranjankumarrk/" target="_blank" rel="noopener noreferrer">LeetCode 100+</a></strong>
+          <span>Data structures &amp; algorithms</span>
+        </div>
+      </div>
+      <div class="edu-card fade-up">
+        <span class="company">LNCT Bhopal</span>
+        <span class="role">B.Tech · CGPA 7.88/10</span>
+        <div class="period">July 2017 – June 2021 · Bhopal, India</div>
       </div>
     </div>
   </section>
@@ -849,25 +986,25 @@
         <div class="skill-category fade-up">
           <h4>⚙️ Backend</h4>
           <div class="skill-tags">
-            <span>Node.js</span><span>NestJS</span><span>Express</span><span>TypeScript</span><span>JavaScript</span>
+            <span>Node.js</span><span>NestJS</span><span>Express</span><span>Golang</span><span>Gin</span><span>TypeScript</span><span>JavaScript</span>
           </div>
         </div>
         <div class="skill-category fade-up">
           <h4>☁️ Cloud & DevOps</h4>
           <div class="skill-tags">
-            <span>AWS (Lambda, ECS, SQS, S3)</span><span>Docker</span><span>Kubernetes</span><span>GitHub Actions</span>
+            <span>AWS (Lambda, ECS, SQS, S3, SES)</span><span>Docker</span><span>Kubernetes</span><span>GitHub Actions</span><span>OpenTelemetry</span>
           </div>
         </div>
         <div class="skill-category fade-up">
           <h4>🗄️ Databases & Caching</h4>
           <div class="skill-tags">
-            <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Redis</span>
+            <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Redis</span><span>Prisma</span><span>TypeORM</span>
           </div>
         </div>
         <div class="skill-category fade-up">
           <h4>🏗️ Architecture</h4>
           <div class="skill-tags">
-            <span>Microservices</span><span>Distributed Systems</span><span>Event-Driven</span><span>REST APIs</span>
+            <span>Microservices</span><span>Distributed Systems</span><span>Event-Driven</span><span>REST APIs</span><span>Kafka</span><span>BullMQ</span>
           </div>
         </div>
         <div class="skill-category fade-up">
@@ -879,7 +1016,7 @@
         <div class="skill-category fade-up">
           <h4>🧠 Core CS</h4>
           <div class="skill-tags">
-            <span>DSA</span><span>DBMS</span><span>Operating Systems</span><span>OOP</span><span>System Design</span>
+            <span>DSA</span><span>System Design</span><span>Jest</span><span>Playwright</span><span>KYC/AML</span>
           </div>
         </div>
       </div>
@@ -891,7 +1028,7 @@
     <div class="container">
       <span class="section-badge">📬 Connect</span>
       <h2 class="section-title">Let's Build Something Great</h2>
-      <p class="section-subtitle">Open to backend-heavy full-stack roles, fintech challenges, and systems work.</p>
+      <p class="section-subtitle">Open to senior backend roles, fintech challenges, and systems work.</p>
 
       <div class="contact-wrapper">
         <!-- Contact Info -->
@@ -919,7 +1056,7 @@
             <div class="icon">🔗</div>
             <div class="detail">
               <span class="label">LinkedIn</span>
-              <a href="https://linkedin.com/in/ranjankumarrk" target="_blank">linkedin.com/in/ranjankumarrk</a>
+              <a href="https://www.linkedin.com/in/ranjankumarrk/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ranjankumarrk</a>
             </div>
           </div>
 
@@ -927,17 +1064,18 @@
             <div class="icon">🐙</div>
             <div class="detail">
               <span class="label">GitHub</span>
-              <a href="https://github.com/ranjankumarrk" target="_blank">github.com/ranjankumarrk</a>
+              <a href="https://github.com/ranjankumarrk" target="_blank" rel="noopener noreferrer">github.com/ranjankumarrk</a>
             </div>
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-          <!-- Replace with your Web3Forms Access Key -->
-          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-          <input type="hidden" name="subject" value="New Contact from Portfolio Website" />
-          <input type="hidden" name="from_name" value="Portfolio Website" />
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/ranjankumar90482@gmail.com" method="POST">
+          <div class="form-banner" id="formBanner">Thanks — your message was sent.</div>
+          <input type="hidden" name="_subject" value="New message from ranjankumarrk.github.io" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="https://ranjankumarrk.github.io/?sent=1#contact" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
@@ -952,15 +1090,6 @@
   <footer>
     <div class="container">
       <p>© 2026 Ranjan Kumar. Built with <span style="color: #22d3ee;">❤</span> for scale.</p>
-      <div class="detail">
-              <span class="label">Google File</span>
-              <a href="https://github.com/ranjankumarrk/ranjankumarrk.github.io/blob/main/googlefd7dc8b627972c0a.html" target="_blank">https://github.com/ranjankumarrk/ranjankumarrk.github.io/blob/main/googlefd7dc8b627972c0a.html</a>
-            </div>
-    </div>
-    <div class="detail">
-              <span class="label">Google File</span>
-              <a href="https://github.com/ranjankumarrk/ranjankumarrk.github.io/blob/main/BingSiteAuth.xml" target="_blank">https://github.com/ranjankumarrk/ranjankumarrk.github.io/blob/main/BingSiteAuth.xml</a>
-            </div>
     </div>
   </footer>
 
@@ -971,13 +1100,17 @@
     const navLinks = document.getElementById('navLinks');
 
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      const open = navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active', open);
+      hamburger.setAttribute('aria-expanded', String(open));
     });
 
     // Close menu on link click (mobile)
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
       });
     });
 
@@ -996,6 +1129,11 @@
     });
 
     fadeElements.forEach(el => observer.observe(el));
+
+    if (new URLSearchParams(window.location.search).get('sent') === '1') {
+      const banner = document.getElementById('formBanner');
+      if (banner) banner.classList.add('visible');
+    }
 
     // Smooth anchor scroll for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1017,19 +1155,20 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Ranjan Kumar",
-      "jobTitle": "Backend Engineer",
+      "jobTitle": "Senior Software Engineer",
       "url": "https://ranjankumarrk.github.io/",
       "email": "ranjankumar90482@gmail.com",
       "telephone": "+919296431948",
       "sameAs": [
-        "https://linkedin.com/in/ranjankumarrk",
-        "https://github.com/ranjankumarrk"
+        "https://www.linkedin.com/in/ranjankumarrk/",
+        "https://github.com/ranjankumarrk",
+        "https://leetcode.com/u/ranjankumarrk/"
       ],
       "worksFor": {
         "@type": "Organization",
         "name": "EWNS Web Services Pvt Ltd"
       },
-      "knowsAbout": ["Node.js", "NestJS", "AWS", "Microservices", "TypeScript", "PostgreSQL", "Redis", "Docker"]
+      "knowsAbout": ["Node.js", "NestJS", "Golang", "AWS", "Microservices", "TypeScript", "PostgreSQL", "Redis", "Docker", "KYC", "AML"]
     }
   </script>
 
