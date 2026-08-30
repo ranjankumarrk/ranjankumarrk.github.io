@@ -815,13 +815,14 @@
   <!-- ===== NAVIGATION ===== -->
   <nav>
     <div class="container nav-content">
-      <span class="nav-logo">RK.</span>
+      <a class="nav-logo" href="/">RK.</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="/resume.html">Resume</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
       </ul>
@@ -858,15 +859,9 @@
         </div>
 
         <div class="hero-cta-group">
-          <a href="#contact" class="btn-primary">
-            📬 Get in Touch
-          </a>
-          <a href="https://www.linkedin.com/in/ranjankumarrk/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-            🔗 LinkedIn
-          </a>
-          <a href="https://github.com/ranjankumarrk" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-            🐙 GitHub
-          </a>
+          <a href="/resume.html" class="btn-primary">Resume (ATS / PDF)</a>
+          <a href="https://www.linkedin.com/in/ranjankumarrk/" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
+          <a href="#contact" class="btn-secondary">Get in touch</a>
         </div>
       </div>
 
@@ -973,29 +968,29 @@
 
   <section id="projects">
     <div class="container">
-      <span class="section-badge">📌 Projects</span>
-      <h2 class="section-title">Things I've Shipped</h2>
-      <p class="section-subtitle">Selected work from production, school, and side projects.</p>
+      <span class="section-badge">Work</span>
+      <h2 class="section-title">Production systems, in public</h2>
+      <p class="section-subtitle">Hiring managers get architecture notes and a small public ledger kit — not a college demo as the first thing they see.</p>
       <div class="projects-grid">
         <article class="project-card fade-up">
-          <h3>FinTech payment platform</h3>
-          <p>KYC/AML, cashflow scoring, ledgers, and statement generation for 150K+ users and 5M+ monthly transactions.</p>
+          <h3><a href="/case-studies/latency.html">40% API latency cut</a></h3>
+          <p>1s → 200ms p95 for 150K+ DAU. Redis, PostgreSQL indexes, MongoDB aggregations, ECS blue-green. Full write-up, no proprietary code.</p>
           <div class="tech-stack-tags">
-            <span>Node.js</span><span>NestJS</span><span>Golang</span><span>AWS</span>
+            <span>NestJS</span><span>Redis</span><span>PostgreSQL</span><span>AWS ECS</span>
           </div>
         </article>
         <article class="project-card fade-up">
-          <h3>Library Management System</h3>
-          <p>1000+ books, 500+ students, RBAC (Admin / Librarian / Student). 12+ tables; search 3s → 200ms. 1st prize, LNCT TechFest 2021.</p>
+          <h3><a href="/case-studies/kyc.html">KYC/AML in 15 minutes</a></h3>
+          <p>Plaid, Persona, Bond, Oracle OWS/OEDQ. Verification 3 days → 15 minutes at 98% auto-decision. 150K+ users on this path.</p>
           <div class="tech-stack-tags">
-            <span>MERN</span><span>PostgreSQL</span><span>JWT</span>
+            <span>KYC</span><span>AML</span><span>Idempotency</span><span>Webhooks</span>
           </div>
         </article>
         <article class="project-card fade-up">
-          <h3><a href="https://mithila-treats-tool.vercel.app" target="_blank" rel="noopener noreferrer">Mithila Treats calculator</a></h3>
-          <p>Production-cost tool for ingredient ratios, pricing, and batch planning. Live on Vercel.</p>
+          <h3><a href="https://github.com/ranjankumarrk/ledger-core">ledger-core</a></h3>
+          <p>Public TypeScript double-entry + idempotency keys — the same two invariants as production disbursements. Tests and CI included.</p>
           <div class="tech-stack-tags">
-            <span>TypeScript</span><span>Vercel</span>
+            <span>TypeScript</span><span>Vitest</span><span>Ledgers</span>
           </div>
         </article>
       </div>
@@ -1134,10 +1129,10 @@
           </div>
 
           <div class="contact-item">
-            <div class="icon">🐙</div>
+            <div class="icon">📄</div>
             <div class="detail">
-              <span class="label">GitHub</span>
-              <a href="https://github.com/ranjankumarrk" target="_blank" rel="noopener noreferrer">github.com/ranjankumarrk</a>
+              <span class="label">Resume</span>
+              <a href="/resume.html">ranjankumarrk.github.io/resume.html</a>
             </div>
           </div>
         </div>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KYC/AML: 3 days to 15 minutes | Ranjan Kumar</title>
+  <meta name="description" content="How Ranjan Kumar (ranjankumarrk) designed KYC/AML onboarding for 150K+ users with Plaid, Persona, and Bond — verification time from 3 days to 15 minutes at 98% accuracy." />
+  <link rel="canonical" href="https://ranjankumarrk.github.io/case-studies/kyc.html" />
+  <link rel="stylesheet" href="../inner.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a class="nav-logo" href="/">RK.</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/resume.html">Resume</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <article class="container">
+    <p class="kicker">Case study · KYC / AML · EWNS</p>
+    <h1>Onboarding verification: 3 days → 15 minutes</h1>
+    <p class="lede">Identity, liveness, and watchlist screening used to wait on humans and serial vendor calls. I designed the backend so most users finish KYC/AML in a single session.</p>
+
+    <div class="metrics">
+      <div class="metric"><strong>3d → 15m</strong><span>Time to verified</span></div>
+      <div class="metric"><strong>98%</strong><span>Auto-decision accuracy</span></div>
+      <div class="metric"><strong>150K+</strong><span>Users onboarded on this path</span></div>
+    </div>
+
+    <h2>The problem</h2>
+    <p>Manual review queues and one-vendor-at-a-time checks meant a user could wait days to fund or transact. That is a product problem and a compliance problem: drop-off on one side, incomplete screening on the other.</p>
+
+    <h2>The shape of the system</h2>
+    <ul>
+      <li><strong>Plaid IDV</strong> for identity and bank-linked signals.</li>
+      <li><strong>Persona</strong> for biometric liveness and document capture.</li>
+      <li><strong>Bond / Atelio</strong> for banking/card rails where the product needed them.</li>
+      <li><strong>Oracle OWS + OEDQ</strong> later in the stack for watchlist screening, profiling, cleansing, and de-duplication.</li>
+    </ul>
+    <p>The NestJS services did not “call a vendor and hope.” Each vendor was an adapter behind a verification state machine: pending, needs-retry, manual-review, passed, failed. Webhooks and polling both had to land on the same idempotent status row.</p>
+
+    <h2>What actually made it fast</h2>
+    <ul>
+      <li>Run independent vendor checks in parallel instead of a chain.</li>
+      <li>Idempotent processors so a duplicate webhook cannot double-create a customer or skip screening.</li>
+      <li>A small manual-review queue only for the residual ~2%, not for the default path.</li>
+      <li>Clear failure reasons back to the client so users retry the right step instead of restarting KYC.</li>
+    </ul>
+
+    <h2>Related money path</h2>
+    <p>The same platform scores cashflow from 3–6 months of banking data (Plaid/Bond) so advance eligibility is minutes, not 48 hours — and posts disbursements/repayments/card auths on a double-entry ledger at 5M+ monthly transactions.</p>
+
+    <p class="note">No customer PII, vendor payloads, or internal runbooks here. If you are hiring for KYC/AML or fintech onboarding, this is the public architecture story; LinkedIn or email for a deeper walkthrough.</p>
+
+    <footer>
+      <a href="/case-studies/latency.html">Previous: 40% latency cut</a> ·
+      <a href="https://github.com/ranjankumarrk/ledger-core">Public ledger kit (idempotency)</a> ·
+      <a href="/resume.html">Resume</a>
+    </footer>
+  </article>
+</body>
+</html>

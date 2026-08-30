@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How I cut API latency 40% (1s → 200ms) | Ranjan Kumar</title>
+  <meta name="description" content="Architecture notes from Ranjan Kumar (ranjankumarrk): how Redis, PostgreSQL indexing, MongoDB aggregations, and AWS ECS blue-green deploys cut API latency 40% for 150K+ daily users." />
+  <link rel="canonical" href="https://ranjankumarrk.github.io/case-studies/latency.html" />
+  <link rel="stylesheet" href="../inner.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a class="nav-logo" href="/">RK.</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/resume.html">Resume</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <article class="container">
+    <p class="kicker">Case study · Production fintech · EWNS</p>
+    <h1>How I cut API latency 40% for 150K+ daily users</h1>
+    <p class="lede">p95 went from about 1 second to about 200ms. The work was diagnosis first, then cache, indexes, and a safer deploy path — not a rewrite.</p>
+
+    <div class="metrics">
+      <div class="metric"><strong>1s → 200ms</strong><span>API p95 latency</span></div>
+      <div class="metric"><strong>150K+</strong><span>Daily active users</span></div>
+      <div class="metric"><strong>0</strong><span>User-facing downtime during cutover</span></div>
+    </div>
+
+    <h2>The problem</h2>
+    <p>Hot paths in a NestJS/Node.js financial API were spending most of their time in the database and in repeated reads of slowly changing reference data. Under 150K+ DAU that showed up as p95 near 1s — enough to stall onboarding, balances, and statement flows.</p>
+
+    <h2>How I found it</h2>
+    <ul>
+      <li>Traced slow handlers with OpenTelemetry and CloudWatch — the bottleneck was data access, not CPU.</li>
+      <li>Logged query shapes: unindexed filters, repeated lookups in loops, and aggregations that scanned too much of MongoDB.</li>
+      <li>Separated “must be strongly consistent” (ledger, auth) from “can be cached for seconds” (profile flags, product config, watchlist metadata).</li>
+    </ul>
+
+    <h2>What we changed</h2>
+    <ul>
+      <li><strong>Redis</strong> in front of read-heavy, low-churn data, with short TTLs and explicit invalidation on writes.</li>
+      <li><strong>PostgreSQL</strong> indexes matched actual WHERE/JOIN patterns, not guesswork from the schema.</li>
+      <li><strong>MongoDB</strong> compound indexes and aggregations rewritten so the working set stayed in RAM for the hot collections.</li>
+      <li><strong>AWS ECS</strong> blue-green deploys so the index and cache changes rolled out without a freeze window.</li>
+    </ul>
+
+    <h2>What I would still watch</h2>
+    <p>Cache stampede on expiry, stale reads on KYC status, and index bloat. We kept ledger posts and disbursement writes on the primary path — no cache in front of money movement.</p>
+
+    <p class="note">This is the public version of production work. Vendor internals and customer data stay private. The numbers match my resume: 40% latency cut, 150K+ DAU, 5M+ monthly transactions on the same platform.</p>
+
+    <footer>
+      <a href="/case-studies/kyc.html">Next: KYC from 3 days to 15 minutes</a> ·
+      <a href="/resume.html">Resume</a> ·
+      <a href="https://www.linkedin.com/in/ranjankumarrk/">LinkedIn</a>
+    </footer>
+  </article>
+</body>
+</html>
