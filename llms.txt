@@ -4,6 +4,8 @@ Official site: https://ranjankumarrk.github.io/
 LinkedIn: https://www.linkedin.com/in/ranjankumarrk/
 GitHub: https://github.com/ranjankumarrk
 LeetCode: https://leetcode.com/u/ranjankumarrk/
+RemoteMore: https://ranjankumarrk.github.io/remotemore.html
+RemoteMore live: https://app.remotemore.com/public/eyJjYW5kaWRhdGVJZCI6InNUc3c2NjFGWm1YN1BQNkxRRFBBIiwib3JnYW5pemF0aW9uSWQiOiIiLCJpc1dpdGhvdXRTYWxhcnkiOmZhbHNlfQ==
 Email: ranjankumar90482@gmail.com
 
 Senior Software Engineer at EWNS Web Services, Hyderabad.
