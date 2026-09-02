@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- SEO Meta Tags -->
-  <title>Ranjan Kumar (ranjankumarrk) | Official site — Senior Software Engineer, Node.js, Golang, AWS</title>
-  <meta name="description" content="Official website of Ranjan Kumar (ranjankumarrk), Senior Software Engineer at EWNS Web Services, Hyderabad. Node.js, NestJS, Golang, AWS. Open to remote roles in the USA, Singapore, India, and worldwide." />
+  <title>Ranjan Kumar (ranjankumarrk) | Official site — Senior Software Engineer, NestJS, TypeScript, AWS payments</title>
+  <meta name="description" content="Official website of Ranjan Kumar (ranjankumarrk). Senior Software Engineer, EWNS, Hyderabad. NestJS, TypeScript, AWS (Lambda, SQS, CloudWatch), PostgreSQL. Fintech payments, KYC, ledgers. LinkedIn linkedin.com/in/ranjankumarrk · GitHub github.com/ranjankumarrk." />
   <meta name="author" content="Ranjan Kumar" />
-  <meta name="keywords" content="Ranjan Kumar, Ranjan Kumar RK, ranjankumarrk, Ranjan Kumar EWNS, Senior Software Engineer Hyderabad, Senior Backend Engineer, Node.js, NestJS, Golang, AWS" />
+  <meta name="keywords" content="Ranjan Kumar, Ranjan Kumar RK, ranjankumarrk, Ranjan Kumar EWNS Hyderabad, Senior Software Engineer, NestJS, TypeScript, AWS, fintech payments, KYC, LinkedIn ranjankumarrk" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow" />
   <meta name="geo.region" content="IN-TG" />
@@ -18,7 +18,7 @@
   <link rel="me" href="https://leetcode.com/u/ranjankumarrk/" />
   <link rel="alternate" hreflang="en" href="https://ranjankumarrk.github.io/" />
 
-  <meta property="og:title" content="Ranjan Kumar | Senior Backend Engineer — Open to Remote (US · Singapore · India)" />
+  <meta property="og:title" content="Ranjan Kumar (ranjankumarrk) | Senior Software Engineer — NestJS, AWS, fintech payments" />
   <meta property="og:description" content="Senior Software Engineer. Node.js, NestJS, Golang, AWS. Open to remote roles in the USA, Singapore, India, and worldwide." />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://ranjankumarrk.github.io/" />
@@ -431,6 +431,14 @@
       transform: translateY(-4px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
+    .timeline-item.featured .role::after {
+      content: " · highlighted";
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
 
     .timeline-item .company,
     .edu-card .company {
@@ -820,6 +828,7 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
+        <li><a href="/who.html">Who</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Work</a></li>
         <li><a href="/ranjankumar.html">Resume</a></li>
@@ -839,8 +848,8 @@
           <span class="highlight">Ranjan Kumar</span>
         </h1>
         <p class="hero-tagline">
-          This is the official website of <strong>Ranjan Kumar</strong> (<strong>ranjankumarrk</strong>) — Senior Software Engineer at EWNS Web Services, Hyderabad.<br />
-          Node.js · Golang · AWS · Open to remote (USA · Singapore · India)
+          This is the official website of <strong>Ranjan Kumar</strong> (<strong>ranjankumarrk</strong>) — Senior Software Engineer, EWNS Web Services, Hyderabad.<br />
+          NestJS · TypeScript · AWS · Fintech payments · Open to remote (USA · Singapore · India)
         </p>
 
         <div class="hero-metrics">
@@ -889,44 +898,45 @@
   <!-- ===== EXPERIENCE ===== -->
   <section id="experience">
     <div class="container">
-      <span class="section-badge">💼 Experience</span>
-      <h2 class="section-title">Where I've Scaled Systems</h2>
-      <p class="section-subtitle">4.5+ years of production fintech systems — now Senior Software Engineer at EWNS.</p>
+      <span class="section-badge">Experience</span>
+      <h2 class="section-title">Payments work I already operate</h2>
+      <p class="section-subtitle">4.5+ years of production fintech. The two roles below are the ones that match senior backend on payment rails: embed across services, ship NestJS/TypeScript on AWS, own it in production.</p>
 
       <div class="timeline">
 
-        <div class="timeline-item fade-up">
+        <div class="timeline-item featured fade-up">
           <span class="company">EWNS Web Services Pvt Ltd</span>
           <span class="role">Senior Software Engineer</span>
-          <div class="period">January 2026 – Present · 8 months · Hyderabad, India (Remote)</div>
+          <div class="period">January 2026 – Present · Hyderabad, India (Remote)</div>
           <ul>
-            <li><strong>Architecture ownership:</strong> Lead end-to-end delivery of business-critical financial microservices — scalability, reliability, and maintainability.</li>
-            <li><strong>Mentorship:</strong> Guide engineers through design discussions, code reviews, debugging, and engineering practices to raise velocity and quality.</li>
-            <li><strong>Production:</strong> Own incident response, root-cause analysis, observability, and performance work that improves reliability and reduces MTTR.</li>
+            <li><strong>Embed and ship:</strong> Drop into whichever financial service needs the next capability — design the flow, build it in the NestJS/TypeScript service that owns the data, operate it with that team.</li>
+            <li><strong>End-to-end ownership:</strong> Idea to production without a perfect spec. Product conversations, implementation, CloudWatch/OpenTelemetry, incidents.</li>
+            <li><strong>Host-team trust:</strong> Design reviews and debugging with the engineers who keep the service after I move to the next flow.</li>
+            <li><strong>Speed:</strong> AI-assisted development to get productive fast in codebases I did not start.</li>
           </ul>
           <div class="tech-stack-tags">
-            <span>Node.js</span><span>NestJS</span><span>Golang</span><span>TypeScript</span>
-            <span>AWS ECS</span><span>OpenTelemetry</span><span>CloudWatch</span>
+            <span>Node.js</span><span>NestJS</span><span>TypeScript</span>
+            <span>AWS Lambda</span><span>SQS</span><span>S3</span><span>CloudWatch</span>
+            <span>PostgreSQL</span>
           </div>
         </div>
 
-        <div class="timeline-item fade-up">
+        <div class="timeline-item featured fade-up">
           <span class="company">EWNS Web Services Pvt Ltd</span>
           <span class="role">Software Development Engineer II</span>
-          <div class="period">January 2024 – January 2026 · 2 years · Hyderabad, India (Remote)</div>
+          <div class="period">January 2024 – January 2026 · Hyderabad, India (Remote)</div>
           <ul>
-            <li><strong>Microservices:</strong> Led architecture for <strong>12+ services</strong> with circuit breakers, retries, and async event processing for high-traffic financial operations.</li>
-            <li><strong>Performance:</strong> Cut API latency <strong>40%</strong> (1s → 200ms) for <strong>150K+ daily active users</strong> via Redis caching, PostgreSQL indexing, MongoDB compound indexes, and blue-green deploys on <strong>AWS ECS</strong>.</li>
-            <li><strong>Statements:</strong> Built CRON generation for <strong>150K+ financial documents / month</strong> using Node.js workers, BullMQ, Redis, AWS S3 &amp; SES, plus Go goroutines &amp; channels.</li>
-            <li><strong>AML:</strong> Applied Oracle Watchlist Screening (OWS) and Enterprise Data Quality (OEDQ) for screening, profiling, cleansing, and de-duplication.</li>
-            <li><strong>Scale:</strong> Event-driven processing of <strong>5M+ monthly transactions</strong> with AWS SQS + BullMQ, 99.99% success rate, idempotent processors, and dead-letter retries.</li>
-            <li><strong>Observability:</strong> OpenTelemetry tracing and CloudWatch monitoring; <strong>60% MTTR reduction</strong>.</li>
+            <li><strong>Cross-boundary:</strong> Worked across <strong>12+ microservices</strong> I did not originally write — circuit breakers, retries, and async jobs so payment flows stay correct under SQS redelivery.</li>
+            <li><strong>Event-driven money movement:</strong> <strong>5M+ monthly transactions</strong> on AWS SQS + BullMQ, idempotent processors, dead-letter retries, 99.99% success.</li>
+            <li><strong>Latency:</strong> API p95 <strong>1s → 200ms</strong> for <strong>150K+ DAU</strong> (Redis, PostgreSQL, MongoDB, ECS blue-green).</li>
+            <li><strong>Verification before funds move:</strong> Oracle OWS/OEDQ AML screening, profiling, cleansing, de-duplication.</li>
+            <li><strong>Async jobs:</strong> 150K+ statements/month — NestJS workers, BullMQ, Redis, AWS S3 &amp; SES.</li>
+            <li><strong>Operate:</strong> OpenTelemetry + CloudWatch; <strong>60% MTTR</strong> reduction.</li>
           </ul>
           <div class="tech-stack-tags">
-            <span>Node.js</span><span>NestJS</span><span>Golang</span><span>TypeScript</span>
-            <span>PostgreSQL</span><span>MongoDB</span><span>Redis</span>
-            <span>AWS (ECS, SQS, S3, SES)</span>
-            <span>BullMQ</span><span>OWS</span><span>OEDQ</span><span>Docker</span>
+            <span>NestJS</span><span>TypeScript</span><span>PostgreSQL</span><span>Redis</span>
+            <span>AWS SQS</span><span>AWS S3</span><span>AWS ECS</span><span>CloudWatch</span>
+            <span>BullMQ</span><span>GitHub Actions</span>
           </div>
         </div>
 
@@ -937,7 +947,7 @@
           <ul>
             <li><strong>KYC/AML:</strong> Onboarding for <strong>150K+ users</strong> with Plaid IDV, Atelio-Bond, and Persona — biometric liveness and watchlist screening at <strong>98% accuracy</strong>. Verification: <strong>3 days → 15 minutes</strong>.</li>
             <li><strong>Cashflow scoring:</strong> Plaid/Bond banking data (3–6 months) for instant advance eligibility — approvals <strong>48 hrs → 30 mins</strong>.</li>
-            <li><strong>Ledger:</strong> Background workers for loan disbursements, repayments, and card authorizations on a double-entry ledger, contributing to <strong>5M+ monthly transactions</strong>.</li>
+            <li><strong>Card &amp; ledger rails:</strong> Workers for loan disbursements, repayments, and <strong>card authorizations</strong> on a double-entry ledger (<strong>5M+ monthly transactions</strong>) — AWS Lambda, API Gateway, S3.</li>
             <li><strong>Auth &amp; quality:</strong> JWT + RBAC; Jest unit/integration tests at <strong>85% coverage</strong>.</li>
           </ul>
           <div class="tech-stack-tags">
@@ -1093,6 +1103,10 @@
           <p>He leads financial microservices serving 150K+ users and 5M+ monthly transactions: KYC/AML (Plaid, Persona, Bond), cashflow scoring, ledgers, statement generation, Redis/PostgreSQL performance, and OpenTelemetry observability.</p>
         </details>
         <details>
+          <summary>How do I find Ranjan Kumar (ranjankumarrk) online?</summary>
+          <p>Search <strong>ranjankumarrk</strong> or <strong>Ranjan Kumar RK</strong>. Same person: LinkedIn linkedin.com/in/ranjankumarrk, GitHub github.com/ranjankumarrk, official site ranjankumarrk.github.io, LeetCode leetcode.com/u/ranjankumarrk, email ranjankumar90482@gmail.com.</p>
+        </details>
+        <details>
           <summary>How can I contact Ranjan Kumar?</summary>
           <p>Email ranjankumar90482@gmail.com, message on <a href="https://www.linkedin.com/in/ranjankumarrk/">LinkedIn</a>, or use the form below. Portfolio: <a href="https://ranjankumarrk.github.io/">ranjankumarrk.github.io</a>. GitHub: <a href="https://github.com/ranjankumarrk">github.com/ranjankumarrk</a>.</p>
         </details>
@@ -1246,7 +1260,7 @@
         "name": "Ranjan Kumar",
         "alternateName": ["ranjankumarrk", "Ranjan Kumar RK", "Ranjan Kumar EWNS"],
         "jobTitle": "Senior Software Engineer",
-        "description": "Senior Software Engineer / Senior Backend Engineer specializing in Node.js, NestJS, Golang, and AWS. Open to remote roles in the United States, Singapore, India, and worldwide.",
+        "description": "Senior Software Engineer (ranjankumarrk) building NestJS, TypeScript, and AWS backends for fintech payments: KYC/AML, ledgers, card authorizations. Open to remote roles in the United States, Singapore, India, and worldwide.",
         "url": "https://ranjankumarrk.github.io/",
         "image": "https://ranjankumarrk.github.io/ranjan.jpg",
         "email": "mailto:ranjankumar90482@gmail.com",
@@ -1270,7 +1284,7 @@
           "@type": "Organization",
           "name": "EWNS Web Services Pvt Ltd"
         },
-        "knowsAbout": ["Node.js", "NestJS", "Golang", "AWS", "Microservices", "TypeScript", "PostgreSQL", "Redis", "Docker", "KYC", "AML", "Remote work"],
+        "knowsAbout": ["Node.js", "NestJS", "TypeScript", "AWS Lambda", "Amazon SQS", "PostgreSQL", "Redis", "Microservices", "Event-driven architecture", "Fintech", "KYC", "AML", "Payments", "Golang", "Remote work"],
         "knowsLanguage": ["English", "Hindi"],
         "hasOccupation": {
           "@type": "Occupation",
@@ -1307,6 +1321,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "He leads financial microservices serving 150K+ users and 5M+ monthly transactions: KYC/AML, cashflow scoring, ledgers, statement generation, Redis/PostgreSQL performance, and OpenTelemetry observability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I find Ranjan Kumar (ranjankumarrk) online?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Search ranjankumarrk or Ranjan Kumar RK. Same person: LinkedIn linkedin.com/in/ranjankumarrk, GitHub github.com/ranjankumarrk, official site ranjankumarrk.github.io, LeetCode leetcode.com/u/ranjankumarrk."
             }
           },
           {
