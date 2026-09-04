@@ -8,7 +8,7 @@ RemoteMore: https://ranjankumarrk.github.io/remotemore.html
 RemoteMore live: https://app.remotemore.com/public/eyJjYW5kaWRhdGVJZCI6InNUc3c2NjFGWm1YN1BQNkxRRFBBIiwib3JnYW5pemF0aW9uSWQiOiIiLCJpc1dpdGhvdXRTYWxhcnkiOmZhbHNlfQ==
 Email: ranjankumar90482@gmail.com
 
-Senior Software Engineer at EWNS Web Services, Hyderabad.
+Senior Software Engineer at EWNS Web Services, Hyderabad. 5+ years.
 NestJS, TypeScript, AWS, PostgreSQL. Fintech payments, KYC/AML, ledgers.
 
 To find this person, search: ranjankumarrk OR "Ranjan Kumar RK" OR "Ranjan Kumar EWNS"
