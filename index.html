@@ -740,6 +740,179 @@
       color: var(--text-secondary);
       font-size: 0.95rem;
     }
+
+    /* ===== LIVE SITES (device frames) ===== */
+    #live-sites {
+      padding: 5rem 0;
+      background: radial-gradient(1200px 500px at 50% 0%, rgba(34, 211, 238, 0.08), transparent 55%);
+    }
+    .live-block {
+      margin-top: 2rem;
+      padding: 1.5rem 1.25rem 1.75rem;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .live-block h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.35rem;
+    }
+    .live-block h3 a { color: var(--text-primary); }
+    .live-block .live-url {
+      font-size: 0.85rem;
+      word-break: break-all;
+      margin-bottom: 0.5rem;
+    }
+    .live-block .live-url a { color: var(--accent-cyan); }
+    .device-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .device {
+      position: relative;
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04) 42%, rgba(10, 15, 30, 0.35));
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      backdrop-filter: blur(22px) saturate(160%);
+      -webkit-backdrop-filter: blur(22px) saturate(160%);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.45),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.06),
+        0 0 0 1px rgba(255, 255, 255, 0.06),
+        0 28px 60px rgba(0, 0, 0, 0.45);
+    }
+    .device .screen {
+      position: relative;
+      overflow: hidden;
+      background: rgba(8, 12, 24, 0.55);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+    }
+    .device .screen::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, transparent 38%, transparent 62%, rgba(34, 211, 238, 0.08) 100%);
+    }
+    .device .screen img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .screen-live {
+      container-type: size;
+    }
+    .screen-live iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 0;
+      transform-origin: top left;
+      background: #fff;
+    }
+    .device-laptop .screen-live iframe {
+      width: 1280px;
+      height: 800px;
+      transform: scale(calc(100cqw / 1280));
+    }
+    .device-tablet .screen-live iframe {
+      width: 768px;
+      height: 1024px;
+      transform: scale(calc(100cqw / 768));
+    }
+    .device-phone .screen-live iframe {
+      width: 390px;
+      height: 844px;
+      transform: scale(calc(100cqw / 390));
+    }
+    .device-laptop {
+      width: min(560px, 100%);
+      border-radius: 16px 16px 12px 12px;
+      padding: 12px 12px 0;
+    }
+    .device-laptop .screen {
+      aspect-ratio: 16 / 10;
+      border-radius: 8px;
+    }
+    .device-laptop .chin {
+      height: 16px;
+      margin: 10px -12px 0;
+      border-radius: 0 0 12px 12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.03));
+      border-top: 1px solid rgba(255,255,255,0.16);
+    }
+    .device-tablet {
+      width: 210px;
+      border-radius: 22px;
+      padding: 16px 13px;
+    }
+    .device-tablet .screen {
+      aspect-ratio: 3 / 4;
+      border-radius: 10px;
+    }
+    .device-tablet::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .device-phone {
+      width: 132px;
+      border-radius: 28px;
+      padding: 14px 9px 16px;
+    }
+    .device-phone::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 46px;
+      height: 7px;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, 0.22);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+    }
+    .device-phone .screen {
+      aspect-ratio: 9 / 19.5;
+      border-radius: 18px;
+    }
+    .device-label {
+      display: block;
+      text-align: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-top: 0.55rem;
+    }
+    @media (max-width: 768px) {
+      .device-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .device-row > :has(.device-phone) {
+        order: -1;
+      }
+      .device-phone {
+        width: 210px;
+      }
+      .device-tablet { width: 240px; }
+      .device-laptop { width: 100%; }
+    }
     .achievements-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -834,6 +1007,7 @@
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="/who.html">Who</a></li>
+        <li><a href="/#live-sites">Live sites</a></li>
         <li><a href="/developers.html">Developers</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Work</a></li>
@@ -917,10 +1091,8 @@
           <span class="role">Senior Software Engineer</span>
           <div class="period">January 2026 – Present · Hyderabad, India (Remote)</div>
           <ul>
-            <li><strong>Embed and ship:</strong> Drop into whichever financial service needs the next capability — design the flow, build it in the NestJS/TypeScript service that owns the data, operate it with that team.</li>
-            <li><strong>End-to-end ownership:</strong> Idea to production without a perfect spec. Product conversations, implementation, CloudWatch/OpenTelemetry, incidents.</li>
-            <li><strong>Host-team trust:</strong> Design reviews and debugging with the engineers who keep the service after I move to the next flow.</li>
-            <li><strong>Speed:</strong> AI-assisted development to get productive fast in codebases I did not start.</li>
+            <li>Ship NestJS/TypeScript features on the financial service that owns the data — design, implement, then operate it with CloudWatch and OpenTelemetry.</li>
+            <li>Take a payment flow (KYC, ledger, statements) from a rough need to production with the team that keeps the service after I move on.</li>
           </ul>
           <div class="tech-stack-tags">
             <span>Node.js</span><span>NestJS</span><span>TypeScript</span>
@@ -1012,6 +1184,113 @@
           </div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section id="live-sites">
+    <div class="container">
+      <span class="section-badge">Live</span>
+      <h2 class="section-title">Live websites</h2>
+      <p class="section-subtitle">Every public site I can send you today. Glass device frames show the real laptop, tablet, and phone layouts. On a phone, the phone preview is first.</p>
+
+      <article class="live-block fade-up">
+        <h3><a href="https://d3011kpjkcpcxd.cloudfront.net/" target="_blank" rel="noopener noreferrer">Tasker</a></h3>
+        <p class="live-url"><a href="https://d3011kpjkcpcxd.cloudfront.net/" target="_blank" rel="noopener noreferrer">https://d3011kpjkcpcxd.cloudfront.net/</a></p>
+        <p>Live AI project-management product (Jira-style sprints, boards, delivery). Open the URL to use it. These frames are real captures of that page — the product blocks embedding, so this is the honest preview.</p>
+        <div class="device-row">
+          <div>
+            <a href="https://d3011kpjkcpcxd.cloudfront.net/" target="_blank" rel="noopener noreferrer" aria-label="Open Tasker in a laptop-sized preview">
+              <div class="device device-laptop">
+                <div class="screen"><img src="/previews/tasker-desktop.png" alt="Tasker homepage on a laptop" width="1280" height="800" /></div>
+                <div class="chin"></div>
+              </div>
+            </a>
+            <span class="device-label">Laptop</span>
+          </div>
+          <div>
+            <a href="https://d3011kpjkcpcxd.cloudfront.net/" target="_blank" rel="noopener noreferrer" aria-label="Open Tasker in a tablet-sized preview">
+              <div class="device device-tablet">
+                <div class="screen"><img src="/previews/tasker-tablet.png" alt="Tasker homepage on a tablet" width="768" height="1024" /></div>
+              </div>
+            </a>
+            <span class="device-label">Tablet</span>
+          </div>
+          <div>
+            <a href="https://d3011kpjkcpcxd.cloudfront.net/" target="_blank" rel="noopener noreferrer" aria-label="Open Tasker in a phone-sized preview">
+              <div class="device device-phone">
+                <div class="screen"><img src="/previews/tasker-phone.png" alt="Tasker homepage on a phone" width="390" height="844" /></div>
+              </div>
+            </a>
+            <span class="device-label">Phone</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="live-block fade-up">
+        <h3><a href="https://mithila-treats-tool.vercel.app/" target="_blank" rel="noopener noreferrer">Mithila Treats — production calculator</a></h3>
+        <p class="live-url"><a href="https://mithila-treats-tool.vercel.app/" target="_blank" rel="noopener noreferrer">https://mithila-treats-tool.vercel.app/</a> · <a href="https://github.com/ranjankumarrk/mithila_treats_tool" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        <p>Live Next.js tool for Indian sweets production: samosa, rasgulla, spongy, and buniya cost/profit calculators. The phone, tablet, and laptop frames below load the live site inside glass devices.</p>
+        <div class="device-row">
+          <div>
+            <div class="device device-laptop">
+              <div class="screen screen-live">
+                <iframe title="Mithila Treats calculator — laptop" src="https://mithila-treats-tool.vercel.app/" loading="lazy"></iframe>
+              </div>
+              <div class="chin"></div>
+            </div>
+            <span class="device-label">Laptop</span>
+          </div>
+          <div>
+            <div class="device device-tablet">
+              <div class="screen screen-live">
+                <iframe title="Mithila Treats calculator — tablet" src="https://mithila-treats-tool.vercel.app/" loading="lazy"></iframe>
+              </div>
+            </div>
+            <span class="device-label">Tablet</span>
+          </div>
+          <div>
+            <div class="device device-phone">
+              <div class="screen screen-live">
+                <iframe title="Mithila Treats calculator — phone" src="https://mithila-treats-tool.vercel.app/" loading="lazy"></iframe>
+              </div>
+            </div>
+            <span class="device-label">Phone</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="live-block fade-up">
+        <h3><a href="https://ranjankumarrk.github.io/">This portfolio</a></h3>
+        <p class="live-url"><a href="https://ranjankumarrk.github.io/">https://ranjankumarrk.github.io/</a> · <a href="https://github.com/ranjankumarrk/ranjankumarrk.github.io" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        <p>Official site, resumes, and case studies on GitHub Pages. Other GitHub repos (Golang-Learning, NodeJS, JavaScript, Web-Development) are learning code, not live websites.</p>
+        <div class="device-row">
+          <div>
+            <a href="https://ranjankumarrk.github.io/" aria-label="Open this portfolio">
+              <div class="device device-laptop">
+                <div class="screen"><img src="/previews/portfolio-desktop.png" alt="Portfolio homepage on a laptop" width="1280" height="800" /></div>
+                <div class="chin"></div>
+              </div>
+            </a>
+            <span class="device-label">Laptop</span>
+          </div>
+          <div>
+            <a href="https://ranjankumarrk.github.io/" aria-label="Open this portfolio on tablet">
+              <div class="device device-tablet">
+                <div class="screen"><img src="/previews/portfolio-tablet.png" alt="Portfolio homepage on a tablet" width="768" height="1024" /></div>
+              </div>
+            </a>
+            <span class="device-label">Tablet</span>
+          </div>
+          <div>
+            <a href="https://ranjankumarrk.github.io/" aria-label="Open this portfolio on phone">
+              <div class="device device-phone">
+                <div class="screen"><img src="/previews/portfolio-phone.png" alt="Portfolio homepage on a phone" width="390" height="844" /></div>
+              </div>
+            </a>
+            <span class="device-label">Phone</span>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
