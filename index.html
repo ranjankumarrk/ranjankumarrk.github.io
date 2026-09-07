@@ -918,6 +918,48 @@
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.25rem;
     }
+    #coding-stats {
+      padding: 5rem 0;
+      background: radial-gradient(1000px 420px at 50% 0%, rgba(34, 211, 238, 0.07), transparent 55%);
+    }
+    .stats-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      gap: 1.25rem;
+    }
+    .stats-card {
+      flex: 1 1 280px;
+      max-width: 520px;
+      padding: 1rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .stats-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    .stats-card.wide {
+      max-width: 720px;
+      flex-basis: 100%;
+    }
+    .stats-note {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
     .achievement-card {
       background: var(--bg-secondary);
       border: 1px solid var(--border-color);
@@ -1012,6 +1054,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Work</a></li>
         <li><a href="/ranjankumar.html">Resume</a></li>
+        <li><a href="#coding-stats">Stats</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
       </ul>
@@ -1317,6 +1360,48 @@
         <span class="company">LNCT Bhopal</span>
         <span class="role">B.Tech · CGPA 7.88/10</span>
         <div class="period">July 2017 – June 2021 · Bhopal, India</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="coding-stats">
+    <div class="container">
+      <span class="section-badge">Practice</span>
+      <h2 class="section-title">LeetCode, GFG, and GitHub</h2>
+      <p class="section-subtitle">The same live cards as <a href="https://github.com/ranjankumarrk" target="_blank" rel="noopener noreferrer me">github.com/ranjankumarrk</a> — solves, coding score, commits, and streak.</p>
+
+      <div class="stats-stack">
+        <div class="stats-row fade-up">
+          <a class="stats-card" href="https://leetcode.com/u/ranjankumarrk/" target="_blank" rel="noopener noreferrer">
+            <img src="https://leetcard.jacoblin.cool/ranjankumarrk?theme=dark&amp;font=jetbrains_mono&amp;ext=heatmap&amp;cache=0&amp;v=2026-09-08" alt="LeetCode stats for ranjankumarrk" width="500" height="320" />
+          </a>
+          <a class="stats-card" href="https://www.geeksforgeeks.org/user/ranjan_kumar/" target="_blank" rel="noopener noreferrer">
+            <img src="https://gfgstatscard.vercel.app/ranjan_kumar?theme=dark&amp;v=2026-09-08" alt="GeeksforGeeks stats for ranjan_kumar" width="500" height="200" />
+          </a>
+        </div>
+        <div class="stats-row fade-up">
+          <a class="stats-card" href="https://github.com/ranjankumarrk" target="_blank" rel="noopener noreferrer me">
+            <img src="https://github-readme-stats-anuraghazra1.vercel.app/api?username=ranjankumarrk&amp;show_icons=true&amp;hide_border=true&amp;title_color=58A6FF&amp;icon_color=58A6FF&amp;text_color=c9d1d9&amp;bg_color=0d1117&amp;cache_seconds=1800&amp;v=2026-09-08" alt="GitHub stats for ranjankumarrk" width="495" height="195" />
+          </a>
+          <a class="stats-card" href="https://github.com/ranjankumarrk" target="_blank" rel="noopener noreferrer me">
+            <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/top-langs/?username=ranjankumarrk&amp;layout=compact&amp;hide_border=true&amp;title_color=58A6FF&amp;text_color=c9d1d9&amp;bg_color=0d1117&amp;langs_count=6&amp;cache_seconds=1800&amp;v=2026-09-08" alt="Top GitHub languages for ranjankumarrk" width="300" height="195" />
+          </a>
+        </div>
+        <div class="stats-row fade-up">
+          <a class="stats-card wide" href="https://github.com/ranjankumarrk" target="_blank" rel="noopener noreferrer me">
+            <img src="https://streak-stats.demolab.com/?user=ranjankumarrk&amp;theme=dark&amp;hide_border=true&amp;background=0D1117&amp;ring=58A6FF&amp;fire=58A6FF&amp;currStreakNum=58A6FF&amp;v=2026-09-08" alt="GitHub commit streak for ranjankumarrk" width="495" height="195" />
+          </a>
+        </div>
+        <div class="stats-row fade-up">
+          <div class="stats-card wide">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ranjankumarrk/ranjankumarrk/output/github-contribution-grid-snake-dark.svg?v=2026-09-08" />
+              <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ranjankumarrk/ranjankumarrk/output/github-contribution-grid-snake.svg?v=2026-09-08" />
+              <img alt="GitHub contribution snake for ranjankumarrk" src="https://raw.githubusercontent.com/ranjankumarrk/ranjankumarrk/output/github-contribution-grid-snake-dark.svg?v=2026-09-08" width="800" height="120" />
+            </picture>
+          </div>
+        </div>
+        <p class="stats-note">LeetCode: <a href="https://leetcode.com/u/ranjankumarrk/">leetcode.com/u/ranjankumarrk</a> · GFG: <a href="https://www.geeksforgeeks.org/user/ranjan_kumar/">geeksforgeeks.org/user/ranjan_kumar</a> · GitHub: <a href="https://github.com/ranjankumarrk">github.com/ranjankumarrk</a></p>
       </div>
     </div>
   </section>
