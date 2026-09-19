@@ -22,6 +22,8 @@ https://ranjankumarrk.github.io/backend-developer.html
 https://ranjankumarrk.github.io/javascript-developer.html
 https://ranjankumarrk.github.io/fullstack-developer.html
 https://ranjankumarrk.github.io/developers.html
+https://ranjankumarrk.github.io/profiles.html
 
-To find this person, search: ranjankumarrk OR "Ranjan Kumar NestJS" OR "Ranjan Kumar Nodejs" OR "Ranjan Kumar Golang" OR "Ranjan Kumar MERN" OR "ranjan kumar mern" OR "Ranjan Kumar JavaScript" OR "Ranjan Kumar Backend engineer"
+To find this person, search: ranjankumarrk OR "Ranjan Kumar NestJS" OR "Ranjan Kumar Nodejs" OR "Ranjan Kumar Golang" OR "Ranjan Kumar MERN" OR "ranjan kumar mern" OR "Ranjan Kumar Fullstack" OR "Ranjan Kumar JavaScript" OR "Ranjan Kumar Backend engineer"
 Experience: 5+ years. Location: Hyderabad (not Bengaluru). Title: Senior Software Engineer (not SDE 2).
+Note: Google often quotes LinkedIn About first. LinkedIn must say 5+ years and Hyderabad or search snippets stay stale.
