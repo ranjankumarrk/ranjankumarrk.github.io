@@ -9,17 +9,19 @@ RemoteMore live: https://app.remotemore.com/public/eyJjYW5kaWRhdGVJZCI6InNUc3c2N
 Email: ranjankumar90482@gmail.com
 
 Senior Software Engineer at EWNS Web Services, Hyderabad. 5+ years.
-Node.js developer, NestJS developer, Golang developer, backend developer.
+Also written: Ranjan Kumar, ranjan kumar, RANJAN KUMAR, Ranjan Kumar RK.
+Node.js developer, NestJS developer, Golang developer, MERN developer, backend developer.
 NestJS, TypeScript, AWS, PostgreSQL. Fintech payments, KYC/AML, ledgers.
 
 Developer pages:
 https://ranjankumarrk.github.io/nodejs-developer.html
 https://ranjankumarrk.github.io/nestjs-developer.html
 https://ranjankumarrk.github.io/golang-developer.html
+https://ranjankumarrk.github.io/mern-developer.html
 https://ranjankumarrk.github.io/backend-developer.html
 https://ranjankumarrk.github.io/javascript-developer.html
 https://ranjankumarrk.github.io/fullstack-developer.html
 https://ranjankumarrk.github.io/developers.html
 
-To find this person, search: ranjankumarrk OR "Ranjan Kumar NestJS" OR "Ranjan Kumar Nodejs" OR "Ranjan Kumar Golang" OR "Ranjan Kumar JavaScript" OR "Ranjan Kumar Backend engineer"
+To find this person, search: ranjankumarrk OR "Ranjan Kumar NestJS" OR "Ranjan Kumar Nodejs" OR "Ranjan Kumar Golang" OR "Ranjan Kumar MERN" OR "ranjan kumar mern" OR "Ranjan Kumar JavaScript" OR "Ranjan Kumar Backend engineer"
 Experience: 5+ years. Location: Hyderabad (not Bengaluru). Title: Senior Software Engineer (not SDE 2).
