@@ -64,6 +64,12 @@ li { margin: 0.35rem 0; }
   border-radius: 12px; padding: 1rem 1.15rem; margin: 1.5rem 0;
   color: var(--text-secondary); font-size: 0.95rem;
 }
+.shot { margin: 1rem 0 1.5rem; }
+.shot img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--border-color); border-radius: 12px;
+}
+.shot figcaption { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem; }
 footer { color: var(--text-secondary); font-size: 0.9rem; margin-top: 2.5rem; }
 @media (max-width: 640px) {
   h1 { font-size: 1.55rem; }
