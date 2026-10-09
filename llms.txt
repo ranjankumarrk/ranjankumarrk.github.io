@@ -10,13 +10,14 @@ Email: ranjankumar90482@gmail.com
 
 Senior Software Engineer at EWNS Web Services, Hyderabad. 5+ years.
 Also written: Ranjan Kumar, ranjan kumar, RANJAN KUMAR, Ranjan Kumar RK.
-Node.js developer, NestJS developer, Golang developer, MERN developer, backend developer.
-NestJS, TypeScript, AWS, PostgreSQL. Fintech payments, KYC/AML, ledgers.
+Node.js developer, NestJS developer, Golang developer, AWS cloud-native developer, MERN developer, backend developer.
+NestJS, TypeScript, Go, AWS (Lambda, ECS, SQS, S3, SES, CloudWatch), Docker, PostgreSQL. Fintech payments, KYC/AML, ledgers.
 
 Developer pages:
 https://ranjankumarrk.github.io/nodejs-developer.html
 https://ranjankumarrk.github.io/nestjs-developer.html
 https://ranjankumarrk.github.io/golang-developer.html
+https://ranjankumarrk.github.io/aws-cloud-developer.html
 https://ranjankumarrk.github.io/mern-developer.html
 https://ranjankumarrk.github.io/backend-developer.html
 https://ranjankumarrk.github.io/javascript-developer.html
@@ -24,6 +25,6 @@ https://ranjankumarrk.github.io/fullstack-developer.html
 https://ranjankumarrk.github.io/developers.html
 https://ranjankumarrk.github.io/profiles.html
 
-To find this person, search: ranjankumarrk OR "Ranjan Kumar NestJS" OR "Ranjan Kumar Nodejs" OR "Ranjan Kumar Golang" OR "Ranjan Kumar MERN" OR "ranjan kumar mern" OR "Ranjan Kumar Fullstack" OR "Ranjan Kumar JavaScript" OR "Ranjan Kumar Backend engineer"
+To find this person, search: ranjankumarrk OR "Ranjan Kumar NestJS" OR "Ranjan Kumar Nodejs" OR "Ranjan Kumar Golang" OR "Ranjan Kumar AWS" OR "Ranjan Kumar cloud native" OR "Nodejs Ranjan" OR "NestJS Ranjan" OR "Ranjan Kumar MERN" OR "ranjan kumar mern" OR "Ranjan Kumar Fullstack" OR "Ranjan Kumar JavaScript" OR "Ranjan Kumar Backend engineer"
 Experience: 5+ years. Location: Hyderabad (not Bengaluru). Title: Senior Software Engineer (not SDE 2).
 Note: Google often quotes LinkedIn About first. LinkedIn must say 5+ years and Hyderabad or search snippets stay stale.
